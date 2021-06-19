@@ -19,7 +19,7 @@ public class MyApiAdapter {
         OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
         httpClient.addInterceptor(logging);
 
-        String baseUrl = "http://10.0.2.2:8080/myapp/auth/";
+        String baseUrl = "http://147.83.7.204:8080/myapp/auth/";
 
         if(AUTH == null){
             Retrofit retrofit = new Retrofit.Builder()
