@@ -10,10 +10,10 @@ import retrofit2.http.POST;
 import retrofit2.http.Path;
 
 public interface Authentication {
-    @POST("login/")
+    @POST("login")
     Call<ResponseBody>loginUser(@Body Usuario user);
 
-    @POST("signup/")
+    @POST("signup")
     Call<ResponseBody>signUpUser(@Body Usuario user);
 }
 
