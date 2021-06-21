@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66D184"
+    tools:context=".MainActivity4">
+
+    <Button
+        android:id="@+id/playbtn"
+        android:layout_width="186dp"
+        android:layout_height="124dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/label_play"
+        android:textSize="34sp"
+        app:backgroundTint="#B388FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/webbtn"
+        android:layout_width="150dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="452dp"
+        android:text="@string/label_web"
+        android:textSize="20sp"
+        app:backgroundTint="#FF8A80"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.908"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/rankingbtn"
+        android:layout_width="150dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="328dp"
+        android:text="@string/label_ranking"
+        android:textSize="20sp"
+        app:backgroundTint="#82B1FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/perfilbtn"
+        android:layout_width="150dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="200dp"
+        android:text="@string/label_Perfil_player"
+        android:textSize="16sp"
+        app:backgroundTint="#74D8D8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/inventariobtn"
+        android:layout_width="150dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="200dp"
+        android:text="@string/label_inventario"
+        android:textSize="20sp"
+        app:backgroundTint="#F3DA7A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.908"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/salirmenubtn"
+        android:layout_width="96dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="624dp"
+        android:text="@string/label_salir"
+        android:textSize="20sp"
+        app:backgroundTint="#B388FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tiendabtn"
+        android:layout_width="150dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="452dp"
+        android:text="@string/label_tienda"
+        android:textSize="20sp"
+        app:backgroundTint="#FF9E80"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
