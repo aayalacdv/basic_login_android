@@ -5,4 +5,15 @@
     <string name="label_usuario">Usuario</string>
     <string name="label_contraseña">Password</string>
     <string name="label_funnyland">Funnyland</string>
+    <string name="label_play">Play</string>
+    <string name="label_salir">Salir</string>
+    <string name="label_web">Web</string>
+    <string name="label_Perfil_player">Perfil del jugador</string>
+    <string name="label_inventario">Inventario</string>
+    <string name="label_ranking">Ranking</string>
+    <string name="label_tienda">Tienda</string>
+    <string name="label_perfil_aceptar">Aceptar</string>
+
+
+
 </resources>

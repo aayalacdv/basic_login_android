@@ -99,13 +99,13 @@ public class MainActivity extends AppCompatActivity {
         registerBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                openActivity2();
+                openActivity4();
             }
         });
 
     }
-    public void openActivity2() {
-        Intent intent = new Intent(this, MainActivity2.class);
+    public void openActivity4() {
+        Intent intent = new Intent(this, MainActivity4.class);
         startActivity(intent);
     }
 
