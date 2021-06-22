@@ -20,7 +20,8 @@ public class ShopProduct {
         public ShopProduct() {
         }
 
-        public String getIdProduct() {
+
+    public String getIdProduct() {
             return idProduct;
         }
 

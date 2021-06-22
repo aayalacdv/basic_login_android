@@ -36,6 +36,16 @@ public class CompraActivity extends AppCompatActivity {
     private Button compraBtn;
     public static ShopAPI shopAPI;
 
+    public void validateResponse(Response<ResponseBody> response) {
+        if (response.code() == 201) {
+            Log.i("SIGNUP", "Compra efectuada");
+            Toast.makeText(this, "Compra efectuada", Toast.LENGTH_SHORT ).show();
+        } else {
+            Log.i("SIGNUP", "No se ha podido efectuar la compra");
+            Toast.makeText(this, "No se ha podido efectuar la compra", Toast.LENGTH_SHORT ).show();
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,17 +94,6 @@ public class CompraActivity extends AppCompatActivity {
                     );
                 } catch (Exception e) {
                     Log.i("compra", "Exception: " + e.getMessage());
-                }
-            }
-
-
-            public void validateResponse(Response<ResponseBody> response) {
-                if (response.code() == 201) {
-                    Log.i("SIGNUP", "Compra efectuada");
-                    //Toast.makeText(this, "Compra efectuada", Toast.LENGTH_SHORT ).show();
-                } else {
-                    Log.i("SIGNUP", "No se ha podido efectuar la compra");
-                    //Toast.makeText(this, "No se ha podido efectuar la compra", Toast.LENGTH_SHORT ).show();
                 }
             }
         });

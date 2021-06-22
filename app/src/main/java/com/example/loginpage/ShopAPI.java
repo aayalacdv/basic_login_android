@@ -20,7 +20,7 @@ public interface ShopAPI {
     Call<List<Producto>> getProductList();
 
     @GET("productsUser/{name}")
-    Call<List<Producto>> getProductsByUser(@Path("name") String owner);
+    Call<List<ShopProduct>> getProductsByUser(@Path("name") String owner);
 
     @POST("buyProduct")
     Call<ResponseBody> buyProduct(@Body ShopProduct compra);

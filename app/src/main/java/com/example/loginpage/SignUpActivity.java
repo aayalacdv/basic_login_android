@@ -35,7 +35,7 @@ public class SignUpActivity extends AppCompatActivity {
         }
         else{
             Log.i("SIGNUP","Login unsuccessfull");
-            Toast.makeText(this, "Sign up not successful", Toast.LENGTH_SHORT ).show();
+            Toast.makeText(this, "Sign up unsuccessful", Toast.LENGTH_SHORT ).show();
         }
     }
 

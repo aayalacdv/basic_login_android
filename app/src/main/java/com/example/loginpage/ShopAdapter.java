@@ -2,34 +2,21 @@ package com.example.loginpage;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.loginpage.models.Producto;
-import com.example.loginpage.models.ShopProduct;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import okhttp3.OkHttpClient;
-import okhttp3.ResponseBody;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.MyViewHolder>{
 private List<Producto> values = new ArrayList<>();
@@ -47,11 +34,11 @@ private String urlProduct;
 
     public MyViewHolder(View v) {
         super(v);
-        name = (TextView)v.findViewById(R.id.tvidobjeto);
-        price = (TextView)v.findViewById(R.id.tvdescripcion);
+        name = (TextView)v.findViewById(R.id.nomTxt);
+        price = (TextView)v.findViewById(R.id.cantTxt);
         imageView = (ImageView)itemView.findViewById(R.id.objectPicture);
         comprarBtn = (Button) itemView.findViewById(R.id.comprarBtn);
-        producto = (TextView) itemView.findViewById(R.id.tvidobjeto);
+        producto = (TextView) itemView.findViewById(R.id.nomTxt);
     }
 
     public void setOnClickListener(){

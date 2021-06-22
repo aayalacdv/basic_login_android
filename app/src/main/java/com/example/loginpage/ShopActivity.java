@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -33,6 +34,7 @@ public class ShopActivity extends AppCompatActivity {
     public static ShopAPI shopAPI;
     private List<Producto> productList = new ArrayList<>();
     String userId;
+
 
 
     @Override

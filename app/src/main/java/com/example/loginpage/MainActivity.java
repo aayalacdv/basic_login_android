@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.content.Intent;
+import android.widget.Toast;
 
 import com.example.loginpage.models.Usuario;
 
@@ -94,9 +95,11 @@ public class MainActivity extends AppCompatActivity {
     public void validateResponse(Response<ResponseBody> response){
         if(response.code() == 201){
             Log.i("LOGIN","Login successfull");
+            Toast.makeText(this, "Login successfull", Toast.LENGTH_SHORT ).show();
         }
         else{
             Log.i("LOGIN","Login unsuccessfull");
+            Toast.makeText(this, "Login unsuccessfull, try again", Toast.LENGTH_SHORT ).show();
         }
     }
 
