@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText name;
     private EditText password;
 
+    String userId;
+
     MediaPlayer sonidobotones;
 
     @Override
@@ -35,14 +37,16 @@ public class MainActivity extends AppCompatActivity {
         name = (EditText) findViewById(R.id.name);
         password = (EditText)findViewById(R.id.contra);
 
+
         /* BOTÓN DE LOG IN*/
         loginBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 /*sonidobotones = MediaPlayer.create(MainActivity.this, R.raw.botonesandroid);
                 sonidobotones.start();*/
+                userId = name.getText().toString();
 
-                Usuario u = new Usuario(name.getText().toString(), password.getText().toString());
+                Usuario u = new Usuario(userId, password.getText().toString());
 
                 Call<ResponseBody> call = MyApiAdapter.getApiService().loginUser(u);
 
@@ -83,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void perfilActivity() {
         Intent intent = new Intent(this, PerfilActivity.class);
+        intent.putExtra("name", userId);
         startActivity(intent);
     }
 

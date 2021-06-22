@@ -1,6 +1,7 @@
 package com.example.loginpage;
 
 import com.example.loginpage.models.Producto;
+import com.example.loginpage.models.ShopProduct;
 import com.example.loginpage.models.Usuario;
 
 import java.util.List;
@@ -22,5 +23,5 @@ public interface ShopAPI {
     Call<List<Producto>> getProductsByUser(@Path("name") String owner);
 
     @POST("buyProduct")
-    Call<ResponseBody>buyProduct(@Body Usuario user);
+    Call<ResponseBody> buyProduct(@Body ShopProduct compra);
 }

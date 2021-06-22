@@ -1,8 +1,10 @@
 package com.example.loginpage;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -30,12 +32,16 @@ public class ShopActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager layoutManager;
     public static ShopAPI shopAPI;
     private List<Producto> productList = new ArrayList<>();
+    String userId;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layoutshop);
+
+        Intent i = getIntent();
+        userId = i.getStringExtra("name");
 
         OkHttpClient okHttpClient = new OkHttpClient.Builder().build();
 
@@ -51,13 +57,13 @@ public class ShopActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        Call<List<Producto>> followers = (Call<List<Producto>>) shopAPI.getProductList();
+        Call<List<Producto>> productos = (Call<List<Producto>>) shopAPI.getProductList();
 
-        followers.enqueue(new Callback<List<Producto>>() {
+        productos.enqueue(new Callback<List<Producto>>() {
             @Override
             public void onResponse(Call<List<Producto>> call, Response<List<Producto>> response) {
                 productList = response.body();
-                mAdapter = new ShopAdapter(productList, getApplicationContext());
+                mAdapter = new ShopAdapter(productList, getApplicationContext(), userId);
                 recyclerView.setAdapter(mAdapter);
             }
 
